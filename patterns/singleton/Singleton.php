@@ -2,8 +2,16 @@
 
 namespace Patterns\singleton;
 
+/**
+ * Class Singleton
+ * @function say
+ * @package  Patterns\singleton
+ */
 class Singleton
 {
+    /**
+     * @var \Patterns\singleton\Singleton
+     */
     private static $app;
 
     /**
@@ -22,11 +30,20 @@ class Singleton
 
     }
 
+    /**
+     * @return Singleton
+     */
     public static function getApp()
     {
-//        if (isset(self::$app) )
+        if (!isset(static::$app)) {
+            static::$app = new static();
+        }
+        return static::$app;
     }
 
+    /**
+     * Test func
+     */
     public function say()
     {
         $arr = [];
