@@ -9,5 +9,5 @@ $singleton->say();
 $singleton2 = Singleton::getApp();
 
 if ($singleton === $singleton2) {
-    echo "same class \n";
+    echo "same class " . PHP_EOL;
 }

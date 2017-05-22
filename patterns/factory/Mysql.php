@@ -7,7 +7,7 @@ class Mysql implements DbFactoryInterface
 {
     public function __construct()
     {
-        echo "connected to Mysql \n";
+        echo "connected to Mysql " . PHP_EOL;
     }
 
 
@@ -16,6 +16,6 @@ class Mysql implements DbFactoryInterface
      */
     public function query($sql)
     {
-        echo "execute sql:" . $sql . "\n";
+        echo "execute sql:" . $sql . PHP_EOL;
     }
 }

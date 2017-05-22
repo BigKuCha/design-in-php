@@ -47,6 +47,6 @@ class Singleton
     public function say()
     {
         $arr = [];
-        echo array_get($arr, 'k', "Hello Singleton \n");
+        echo array_get($arr, 'k', "Hello Singleton" . PHP_EOL);
     }
 }
